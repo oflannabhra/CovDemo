@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Your account has been created. Please check your email for account activation instructions."
       redirect_to signup_url
     else
-      flash[:notice] = "There was a problem creating your account."
+      flash.now[:error] = "There was a problem creating your account."
       render :action => :new
     end
   end

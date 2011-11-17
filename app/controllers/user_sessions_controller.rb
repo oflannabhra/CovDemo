@@ -39,7 +39,7 @@ class UserSessionsController < ApplicationController
         user.send_forgot_password!
         flash[:notice] = "A link to reset your password has been emailed to you."
       else
-        flash[:error] = "Email #{params[:user_session][:email]} wasn't found."
+        flash.now[:error] = "Email #{params[:user_session][:email]} wasn't found."
         render :action => :forgot_password
       end
     end
