@@ -1,6 +1,13 @@
 class User < ActiveRecord::Base
+  has_one :group
+  accepts_nested_attributes_for :group
+  
   def active?
     active
+  end
+  
+  def admin?
+    is_admin
   end
   
   def activate!
@@ -26,6 +33,16 @@ class User < ActiveRecord::Base
   def send_forgot_password!
     reset_perishable_token!
     Notifier.forgot_password(self).deliver
+  end
+  
+  def make_admin!
+    self.is_admin = true
+    save
+  end
+  
+  def remove_admin!
+    self.is_admin = false
+    save
   end
   
   acts_as_authentic do |c|

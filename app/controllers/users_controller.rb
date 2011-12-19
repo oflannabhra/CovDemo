@@ -1,18 +1,23 @@
 class UsersController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update]
-  # before_filter :load_user_using_perishable_token, :only => [:reset_password, :reset_password_submit]
+  before_filter :load_user_using_perishable_token, :only => [:reset_password, :reset_password_submit]
+  before_filter :require_admin, :only => [:index]
   
   def new
     @user = User.new
+    @user.group = Group.new
   end
   
   def create
     @user = User.new(params[:user])
     
+    @user.group = Group.find_or_create_by_name(params[:user][:group_attributes][:name])
+    
+    
     if @user.save_without_session_maintenance
       @user.send_activation_instructions!
-      flash[:notice] = "Your account has been created. Please check your email for account activation instructions."
+      flash[:notice] = "Your account has been created and will be reviewed by an administrator. You will receive activation instructions in your email."
       redirect_to signup_url
     else
       flash.now[:error] = "There was a problem creating your account."
@@ -34,6 +39,10 @@ class UsersController < ApplicationController
   
   def show
     @user = @current_user
+  end
+  
+  def index
+    @users = User.find(:all, :order => :name)
   end
   
   def edit

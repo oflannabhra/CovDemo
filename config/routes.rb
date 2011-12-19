@@ -25,6 +25,7 @@ CovDemo::Application.routes.draw do
   resources :user_sessions
   resources :users
   resource :user, :as => "account"
+  match 'admin' => "users#index"
   
   match 'signup' => 'users#new', :as => :signup
 
