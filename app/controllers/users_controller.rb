@@ -17,13 +17,14 @@ class UsersController < ApplicationController
     
     if @user.save_without_session_maintenance
       @user.send_activation_instructions!
-      flash[:notice] = "Your account has been created and will be reviewed by an administrator. You will receive activation instructions in your email."
+      flash[:notice] = "Thank you for registering! You will receive activation instructions in your email."
       redirect_to signup_url
     else
       flash.now[:error] = "There was a problem creating your account."
-      render :action => :new
+      render :action => :show
     end
   end
+  
   
   def activate
     @user = User.find_using_perishable_token(params[:activation_code], 1.week)
@@ -45,10 +46,6 @@ class UsersController < ApplicationController
     @users = User.find(:all, :order => :name)
   end
   
-  def edit
-    @user = @current_user
-  end
-  
   def update
     @user = @current_user
     if @user.update_attributes(params[:user])
@@ -58,6 +55,7 @@ class UsersController < ApplicationController
       render :action => edit
     end
   end
+  
   
   def reset_password
     @user = User.find_using_perishable_token(params[:reset_password_code], 1.week)

@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
-  has_one :group
+  belongs_to :group
   accepts_nested_attributes_for :group
+  
+  def group_name
+    Group.find(self.group_id).name
+  end
   
   def active?
     active

@@ -13,7 +13,7 @@
   <tr>
     <td><%=h user.name %></td>
     <td><%=h user.email %></td>
-    <td><%=h user.group %></td>
+	<td><%=h user.group.name %></td>
 	<td><%=h user.active? %></td>
     <td><%=h user.is_admin %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>

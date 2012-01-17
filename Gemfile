@@ -11,7 +11,7 @@ gem 'sqlite3'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # AuthLogic for user accounts
 gem 'authlogic'

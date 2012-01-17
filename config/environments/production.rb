@@ -11,6 +11,20 @@ CovDemo::Application.configure do
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
+  
+  # Configure Mail server for DreamHost
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => 'mail.mattmade.com',
+    :domain  => 'www.mattmade.com',
+    :port      => 80,
+    :user_name => 'covenant@mattmade.com',
+    :password => 'covdemo',
+    :authentication => :plain
+  }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_charset = 'utf-8'
 
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'

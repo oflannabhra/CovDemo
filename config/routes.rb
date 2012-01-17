@@ -7,6 +7,7 @@ CovDemo::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
   
   # Routes for account activation
+  root :to  => 'user_sessions#default'
   match 'activate/(:activation_code)' => 'users#activate', :as => :activate_account
   match 'send_activation(/:user_id)' => 'users#send_activation', :as => :send_activation
   

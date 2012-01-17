@@ -16,6 +16,14 @@ class UserSessionsController < ApplicationController
     end
   end
   
+  def default
+    if current_user
+      redirect_to account_url
+    else
+      redirect_to new_user_session_url
+    end
+  end
+  
   def destroy
     current_user_session.destroy
     flash[:notice] = "Logout successful!"
