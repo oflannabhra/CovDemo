@@ -10105,3 +10105,39 @@ DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3
   [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
 DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 17 15:00:43 -0500 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#default as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Completed 302 Found in 238ms
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Jan 17 15:00:44 -0500 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#new as HTML
+Rendered shared/_error_messages.html.erb (0.5ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_user_sessions_new_html_erb___1122135222_2200952720_0 at /Users/meph/Documents/Projects/rails/cov_demo/app/views/user_sessions/new.html.erb:3)
+Rendered shared/_notice_messages.html.erb (0.6ms)
+Rendered user_sessions/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 95ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 17 16:32:33 -0500 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#default as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Completed 302 Found in 114ms
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at Tue Jan 17 16:32:33 -0500 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#new as HTML
+Rendered shared/_error_messages.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_user_sessions_new_html_erb___1122135222_2200889020_0 at /Users/meph/Documents/Projects/rails/cov_demo/app/views/user_sessions/new.html.erb:3)
+Rendered shared/_notice_messages.html.erb (0.5ms)
+Rendered user_sessions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 40ms (Views: 17.6ms | ActiveRecord: 0.0ms)
