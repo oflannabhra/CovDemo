@@ -1,6 +1,6 @@
 class Notifier < ActionMailer::Base
   default :from => "no-reply@covenantgroup.com"
-  default_url_options[:host => "localhost:3000"]
+  #default_url_options[:host => "localhost:3000"]
   
   def forgot_password(user)
     @reset_password_url = reset_password_url(user.perishable_token)

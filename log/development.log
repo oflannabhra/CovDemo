@@ -10214,3 +10214,6 @@ DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3
   [1m[36mSQL (49.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('oflannabhra@gmail.com')) LIMIT 1[0m
   [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE ("users"."persistence_token" = '4bd6c4a3ee588579767df55a9567e070136685300d5f85d4fbe5731e2b2825e5b5606288b08524534528acb5cd779fb733b348c3c6f9845fa5bcc579af61007a') LIMIT 1
   [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."single_access_token" = '45cWwx4dsHdZiQ0h65U6') LIMIT 1[0m
+DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
