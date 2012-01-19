@@ -20,7 +20,7 @@ CovDemo::Application.configure do
     :port      => 587,
     :user_name => 'covenant@mattmade.com',
     :password => 'covdemo',
-    :authentication => :login
+    :authentication => :login,
     :enable_starttls_auto => false
   }
   config.action_mailer.raise_delivery_errors = true
