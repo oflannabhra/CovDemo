@@ -14,7 +14,7 @@ CovDemo::Application.configure do
   
   # Configure Mail server for DreamHost
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
     :address => 'mail.mattmade.com',
     :domain  => 'www.mattmade.com',
     :port      => 80,
