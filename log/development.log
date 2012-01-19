@@ -10141,3 +10141,76 @@ DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>
 Rendered shared/_notice_messages.html.erb (0.5ms)
 Rendered user_sessions/new.html.erb within layouts/application (10.8ms)
 Completed 200 OK in 40ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUserSessions (20111102134153)
+Migrating to CreateUsers (20111102134453)
+Migrating to AddActiveToUsers (20111109161655)
+Migrating to AddAdminToUsers (20111205152245)
+Migrating to CreateGroups (20111205190007)
+Migrating to AddGroupToUsers (20111206184557)
+Migrating to AddUsersToGroups (20111220225129)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.8ms)[0m  [1mALTER TABLE "groups" ADD "user_id" integer[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111220225129')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("groups")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (29.3ms)[0m  SELECT 1 FROM "groups" WHERE ("groups"."name" IS NULL) LIMIT 1
+  [1m[36mAREL (49.5ms)[0m  [1mINSERT INTO "groups" ("description", "name", "created_at", "updated_at", "user_id") VALUES (NULL, NULL, '2012-01-19 01:03:49.031001', '2012-01-19 01:03:49.031001', NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  SELECT 1 FROM "groups" WHERE ("groups"."name" IS NULL) AND ("groups".id <> 6) LIMIT 1
+  [1m[36mSQL (49.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('oflannabhra@gmail.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE ("users"."persistence_token" = '4bd6c4a3ee588579767df55a9567e070136685300d5f85d4fbe5731e2b2825e5b5606288b08524534528acb5cd779fb733b348c3c6f9845fa5bcc579af61007a') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."single_access_token" = '45cWwx4dsHdZiQ0h65U6') LIMIT 1[0m
