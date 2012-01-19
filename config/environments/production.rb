@@ -20,7 +20,7 @@ CovDemo::Application.configure do
     :port      => 80,
     :user_name => 'covenant@mattmade.com',
     :password => 'covdemo',
-    :authentication => :plain
+    :authentication => :login
   }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
