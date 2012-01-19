@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       redirect_to signup_url
     else
       flash.now[:error] = "There was a problem creating your account."
-      render :action => :show
+      render :action => :new
     end
   end
   
