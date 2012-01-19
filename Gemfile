@@ -9,7 +9,7 @@ gem 'rack', ">= 1.2.3"
 gem 'sqlite3'
 
 # Use mysql2 for production
-gem 'mysql2'
+gem 'mysql2', "< 0.3"
 
 # Use unicorn as the web server
 # gem 'unicorn'
