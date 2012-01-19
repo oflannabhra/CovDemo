@@ -17,7 +17,7 @@ CovDemo::Application.configure do
   ActionMailer::Base.smtp_settings = {
     :address => 'mail.mattmade.com',
     :domain  => 'mattmade.com',
-    :port      => 80,
+    :port      => 587,
     :user_name => 'covenant@mattmade.com',
     :password => 'covdemo',
     :authentication => :login
