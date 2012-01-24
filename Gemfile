@@ -8,6 +8,9 @@ gem 'rack', ">= 1.2.3"
 
 gem 'sqlite3'
 
+# Use jquery instead of prototype.js
+gem 'jquery-rails'
+
 # Use mysql2 for production
 gem 'mysql2', "< 0.3"
 

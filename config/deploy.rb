@@ -1,6 +1,8 @@
 
 default_run_options[:pty] = true
 
+ssh_options[:keys] = %w(/Users/meph/.ssh/id_rsa)
+
 # be sure to change these
 set :user, 'oflannabhra'
 set :domain, 'mattmade.com'

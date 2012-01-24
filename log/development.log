@@ -10217,3 +10217,5 @@ DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3
 DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
   [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+DEPRECATION WARNING: ActionMailer::Base.default_charset=value is deprecated, use default :charset => value instead. (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/meph/Documents/Projects/rails/cov_demo/config/environment.rb:5)
